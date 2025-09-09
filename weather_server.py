@@ -17,8 +17,8 @@ def get_weather(location: str) -> dict:
     api_key = os.getenv("OPENWEATHER_API_KEY")
     if not api_key:
         return {"error": "Missing OPENWEATHER_API_KEY environment variable"}
-    logging.info("Preparing URL")
-    logging.info(f"API KEY : {api_key}")
+    # logging.info("Preparing URL")
+    # logging.info(f"API KEY : {api_key}")
     url = "https://api.openweathermap.org/data/2.5/weather"
     params = {"q": location, "appid": api_key}
     resp = requests.get(url, params=params)

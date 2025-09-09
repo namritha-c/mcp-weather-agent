@@ -32,7 +32,5 @@ def extract_intent_and_city(message: str):
             if ent["entity_group"] in ["LOC", "ORG", "MISC"]
         ]
         city = cities[0] if cities else None
-    else:
-        intent = result["labels"][1]
-
+    print("city : ",city)
     return {"intent": intent, "city": city}
